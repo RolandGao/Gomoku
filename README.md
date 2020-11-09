@@ -5,6 +5,7 @@ If you don't have Processing already installed, go to https://processing.org/dow
 
 Click on any .pde file and the entire project will load. Hit the play button to challenge the AI.
 
+<img src="https://github.com/RolandGao/Gomoku/blob/master/example.png" width="500"/>
 
 
 ## Customization
