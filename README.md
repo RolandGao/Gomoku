@@ -3,7 +3,7 @@ A Gomoku AI that can think 9 steps ahead. (An average human can think about 3 st
 
 If you don't have Processing already installed, go to https://processing.org/download/ and download it.
 
-Click on any .pde file and the entire project will load. Hit the play button to challenge the AI.
+Click on any .pde file and the entire project will load. Hit the play button to challenge the AI. To undo a step, press g.
 
 <img src="https://github.com/RolandGao/Gomoku/blob/master/example.png" width="500"/>
 
