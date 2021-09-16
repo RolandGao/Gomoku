@@ -24,12 +24,12 @@ Our AI model can beat most if not all existing AI models, even when our AI goes 
 
 (yyjhao/HTML5-Gomoku)[https://github.com/yyjhao/HTML5-Gomoku] with over 60 stars. We win as white.
 
-<img src="https://github.com/RolandGao/Gomoku/blob/master/competitor1.png" width="500"/>
+<img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor1.png" width="500"/>
 
 (Kesoyuh/Gomoku)[https://github.com/Kesoyuh/Gomoku] with over 150 stars. We win as white.
 
-<img src="https://github.com/RolandGao/Gomoku/blob/master/competitor2.png" width="500"/>
+<img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor2.PNG" width="500"/>
 
 (gobang)[https://github.com/lihongxun945/gobang] with over 1.2k stars. We win as white.
 
-<img src="https://github.com/RolandGao/Gomoku/blob/master/competitor3.png" width="500"/>
+<img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor3.png" width="500"/>
