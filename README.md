@@ -22,14 +22,14 @@ On my MacBook Pro, The AI takes around 1 second to figure out each move, though 
 ## Competition
 Our AI model can beat most if not all existing AI models, even when our AI goes second (aka when going white).
 
-(yyjhao/HTML5-Gomoku)[https://github.com/yyjhao/HTML5-Gomoku] with over 60 stars. We win as white.
+[yyjhao/HTML5-Gomoku](https://github.com/yyjhao/HTML5-Gomoku) with over 60 stars. We win as white.
 
 <img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor1.png" width="500"/>
 
-(Kesoyuh/Gomoku)[https://github.com/Kesoyuh/Gomoku] with over 150 stars. We win as white.
+[Kesoyuh/Gomoku](https://github.com/Kesoyuh/Gomoku) with over 150 stars. We win as white.
 
 <img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor2.PNG" width="500"/>
 
-(gobang)[https://github.com/lihongxun945/gobang] with over 1.2k stars. We win as white.
+[gobang](https://github.com/lihongxun945/gobang) with over 1.2k stars. We win as white.
 
 <img src="https://github.com/RolandGao/Gomoku/blob/master/Competitor3.png" width="500"/>
