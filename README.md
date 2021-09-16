@@ -13,6 +13,20 @@ You can change who plays first and the AI strength by going into gomoku3_4/gomok
 ```java
 game = new Game(9, 2);
 ```
-The first parameter indicates the AI's strength, I suggest putting in 9 or 7. The second parameter indicates the player who goes first. 2 means the player goes first; 1 means the AI goes first.
+The first parameter indicates the AI's strength, I suggest putting in 9 or 7. 
+
+The second parameter indicates who is playing whom. 1 is AI vs Player, 2 is Player vs AI, 3 is AI vs AI, 4 is Player vs Player.
 
 On my MacBook Pro, The AI takes around 1 second to figure out each move, though it might take longer on the first two moves. If it takes too long on your computer, try setting the AI strength to 7 instead of 9. 
+
+## Competition
+Our AI model can beat most if not all existing AI models, even when our AI goes second (aka when going white).
+
+(yyjhao/HTML5-Gomoku)[https://github.com/yyjhao/HTML5-Gomoku] with over 60 stars
+We win as white.
+
+(Kesoyuh/Gomoku)[https://github.com/Kesoyuh/Gomoku] with over 150 stars
+We win as white.
+
+(gobang)[https://github.com/lihongxun945/gobang] with over 1.2k stars
+We win as white.
