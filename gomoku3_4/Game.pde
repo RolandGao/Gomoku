@@ -76,8 +76,8 @@ class Game {
     }
     if (isFirstStep && p1.getIsHuman() && p2.getIsHuman() == false) {
       isFirstStep = false;
-      Openbook open = new Openbook(x, y);
-      Location lo = open.play();
+      Openbook book = new Openbook(x, y);
+      Location lo = book.play();
       update(lo.getX(), lo.getY());
     }
   }

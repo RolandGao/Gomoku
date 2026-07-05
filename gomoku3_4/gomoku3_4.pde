@@ -6,6 +6,9 @@ int hashCount = 0;
 final boolean doHash = true;
 final boolean testMode = false;
 Game game;
+final int FLAG_EXACT = 0;
+final int FLAG_UPPERBOUND = 1;
+final int FLAG_LOWERBOUND = 2;
 
 // 3 levels of threat: savable 3 _BBB_ savable 4 WBBBB_  unsavable 4 _BBBB_
 // possible moves might not work
@@ -32,6 +35,7 @@ Game game;
 
 void setup() {
   size(540, 540);
+  pixelDensity(1);
   game = new Game(9, 2);
 }
 
@@ -71,14 +75,10 @@ class Location {
     score = x;
   }
 }
-enum Flag {
-  EXACT, UPPERBOUND, LOWERBOUND;
-}
-
 class TTNode {
   int value, depth;
-  Flag flag;
-  TTNode(int value, int depth, Flag flag) {
+  int flag;
+  TTNode(int value, int depth, int flag) {
     this.value = value;
     this.depth = depth;
     this.flag = flag;
@@ -145,11 +145,11 @@ int negamax(Board board, int depth, int alpha, int beta, int side) { // beta upp
     TTNode node = tt.get(board.getKey());
     if (node != null && node.depth >= depth) {
       hashCount++;
-      if (node.flag == Flag.EXACT)
+      if (node.flag == FLAG_EXACT)
         return node.value;
-      else if (node.flag == Flag.LOWERBOUND)
+      else if (node.flag == FLAG_LOWERBOUND)
         alpha = max(alpha, node.value);
-      else if (node.flag == Flag.UPPERBOUND)
+      else if (node.flag == FLAG_UPPERBOUND)
         beta = min(beta, node.value);
       if (alpha >= beta)
         return node.value;
@@ -182,13 +182,13 @@ int negamax(Board board, int depth, int alpha, int beta, int side) { // beta upp
   }
   if (doHash && contains(levels, steps)) {
     long bk = board.getKey();
-    Flag flag;
+    int flag;
     if (bestMove <= alphaOrig)
-      flag = Flag.UPPERBOUND;
+      flag = FLAG_UPPERBOUND;
     else if (bestMove >= beta)
-      flag = Flag.LOWERBOUND;
+      flag = FLAG_LOWERBOUND;
     else
-      flag = Flag.EXACT;
+      flag = FLAG_EXACT;
     TTNode node = new TTNode(bestMove, depth, flag);
     tt.put(bk, node);
   }

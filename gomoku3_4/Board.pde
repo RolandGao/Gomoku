@@ -27,10 +27,10 @@ class Board {
     boardImage = loadImage("chessboard.jpg");
     blackPiece = loadImage("piece_black.png");
     whitePiece = loadImage("piece_white.png");
-    background(boardImage);
     state = 0;
     k = 0;
     initHash();
+    drawBoard();
   }
   void initHash() {
     for (int i = 0; i < 15; i++) {
@@ -282,7 +282,11 @@ class Board {
     return false;
   }
   void drawBoard() {
-    background(boardImage);
+    if (boardImage == null) {
+      background(220);
+    } else {
+      image(boardImage, 0, 0, width, height);
+    }
     for (int i = 0; i < 15; i++) {
       for (int j = 0; j < 15; j++) {
         if (board[i][j] != 0)

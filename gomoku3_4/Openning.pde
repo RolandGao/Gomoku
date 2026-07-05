@@ -1,10 +1,13 @@
-enum Openning{corner, side, skip}
+final int OPENING_CORNER = 0;
+final int OPENING_SIDE = 1;
+final int OPENING_SKIP = 2;
+
 class Openbook {
-  Openning open;
+  int opening;
   int x, y;
   ArrayList<Location> locations;
-  Openbook(Openning open, int x, int y){
-    this.open = open;
+  Openbook(int opening, int x, int y){
+    this.opening = opening;
     this.x = x;
     this.y = y;
     init();
@@ -14,18 +17,18 @@ class Openbook {
     this.y = y;
     int n = (int) random(3);
     switch (n){
-      case 0: open = Openning.corner; break;
-      case 1: open = Openning.side; break;
-      case 2: open = Openning.skip; break;
+      case 0: opening = OPENING_CORNER; break;
+      case 1: opening = OPENING_SIDE; break;
+      case 2: opening = OPENING_SKIP; break;
     }
     init();
   }
   Openbook(){
     int n = (int) random(3);
     switch (n){
-      case 0: open = Openning.corner; break;
-      case 1: open = Openning.side; break;
-      case 2: open = Openning.skip; break;
+      case 0: opening = OPENING_CORNER; break;
+      case 1: opening = OPENING_SIDE; break;
+      case 2: opening = OPENING_SKIP; break;
     }
     x = 7;
     y = 7;
@@ -33,10 +36,10 @@ class Openbook {
   }
   void init(){
     locations = new ArrayList<Location>();
-    switch(open){
-      case corner : corner(); break;
-      case side: side(); break;
-      case skip : skip(); break;
+    switch(opening){
+      case OPENING_CORNER : corner(); break;
+      case OPENING_SIDE: side(); break;
+      case OPENING_SKIP : skip(); break;
     }
   }
   void corner(){
